@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta https-equiv="X-UA-Compatible">
+ <style>
+  h1 {color:crimson;
+  background-color: black;
+  }
+ </style>
+</head>
+<main>
+<h1>Class 1 Lab</h1>
+<body>
+  <p style="color:green; background-color: yellow;font-size: 25px;">
+    Hi, what is your name? </p>
+  <p style="color:crimson;background-color: goldenrod;font-size:25px;">
+    Where are you from?</p>
+  <p style="color:darkorange;background-color: green;font-size: 25px;">
+    What is your favorite food?</p>
+  <p style="color: rebeccapurple;background-color: yellow;font-size: 25px;">
+    What's your favorite vacation destination?</p>
+<script>
+  let user = prompt('Hi, What is your name?')
+  console.log ('The user\'s name is ' + user + 'hello there ' +  user + 'how are you');
+  console.log("The user's name is ${user} hello there ${user}");
+
+  let home = prompt('Where are you from?')
+  console.log('your from ${home}');
+
+  let favFood = prompt('What is your favorite food')
+  console.log('your favorite food is ${favFood}');
+
+  let vacay = prompt('What is your favorite vacation destination?')
+  console.log('your favorite location is ${vacay}');
+
+  function userAnswer(){
+    document.write(`Hello ${user}. I have heard of ${home} and ${favFood} is also my favorite food and I would love to visit ${vacay} too.`)
+  }
+</script>
+<script>userAnswer()</script>
+</main>
+</body>
+
+</html>
