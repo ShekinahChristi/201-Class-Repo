@@ -13,8 +13,8 @@ let userPoints = 0;
 let answer1 = prompt('Was I born in Nashville?');
 
 if (answer1 === 'yes' || answer1 === 'y') {
-  alert('Correct, on to the next question' + ' ' + userPoints);
-
+  alert('Correct, on to the next question');
+  userPoints++;
   // console.log('Correct, on to the next question');
 } else if (answer1 === 'no' || answer1 === 'n') {
   alert('Nope try again');
@@ -27,9 +27,10 @@ else {
 let answer2 = prompt('My birthday is in June?');
 
 if (answer2 === 'yes' || answer2 === 'y') {
-  // console.log('Right again, Keep going!!');
-  alert('Right again, Keep going!!' + ' ' + userPoints);
   userPoints++;
+  // console.log('Right again, Keep going!!');
+  alert('Right again, Keep going!!');
+
 } else if (answer2 === 'no' || answer2 === 'n') {
   // console.log('Only 11 other months right, who could have known');
   alert('Only 11 other months right, who could have known');
@@ -41,8 +42,9 @@ if (answer2 === 'yes' || answer2 === 'y') {
 let answer3 = prompt('I was an only child growing up?');
 
 if (answer3 === 'yes' || answer3 === 'y') {
+  userPoints++;
   // console.log('It was lonely but your right');
-  alert('It was lonely but your right' + ' ' + userPoints);
+  alert('It was lonely but your right');
 
 } else if (answer3 === 'no' || answer3 === 'n') {
   // console.log('I wish but try again friend.');
@@ -53,12 +55,14 @@ if (answer3 === 'yes' || answer3 === 'y') {
 let answer4 = prompt('I played football and baseball growing up?');
 
 if (answer4 === 'yes' || answer4 === 'y') {
+  userPoints++;
   // console.log('Ah yes, I loved running back and shortstop');
-  alert('Ah yes, I loved running back and shortstop' + ' ' + userPoints);
+  alert('Ah yes, I loved running back and shortstop');
 
 } else if (answer4 === 'no' || answer4 === 'n') {
+  userPoints++;
   // console.log('Man I wouldnt know what id do if you were right');
-  alert('Man I wouldnt know what id do if you were right' + ' ' + userPoints);
+  alert('Man I wouldnt know what id do if you were right');
 }else {
   alert('That answer is not valid');
 
@@ -66,8 +70,9 @@ if (answer4 === 'yes' || answer4 === 'y') {
 let answer5 = prompt('Did I graduate from Tennessee State University');
 
 if (answer5 === 'yes' || answer5 === 'y') {
+  userPoints++;
   // console.log('Yes I did, graduate from The Land Of Golden Sunshine, The best HBCU in the land.');
-  alert('Yes I did, graduate from the The Land Of Golden Sunshine, The best HBCU in the land.' + ' ' + userPoints);
+  alert('Yes I did, graduate from the The Land Of Golden Sunshine, The best HBCU in the land.');
 
 } else if (answer5 === 'no' || answer5 === 'n') {
   // console.log('And miss my chance to meet Oprah, I do not think so!');
@@ -84,22 +89,29 @@ while (number !== '6'){
     alert('too low');
   }else if (number > 6){
     alert('too high');
-  }
+  }else {
+    alert('Correct');
+  }userPoints++;
 }
-i++;
-if(i<6){
+i = i + 1;
+if(i === 6){
   number = '6';
   console.log(number);
 }
 
 for (let i = 0; i < 4; i++){
   console.log('Second game :' , i);
-  let number2 = prompt('guess a number between 1 and 10');
-  if(number2 === '5'){
+  let number2 = prompt('Pick my favorite superhero');
+  if(number2 === 'Wolverine'){
     alert('correct!');
+    userPoints++;
+    break;
+  }else {
+    alert('Wrong, try again!');
   }
 }
+console.log(userPoints);
 
-alert('You have gained ${userPoints}');
+alert(`You have gained ${userPoints} points`);
 
-alert('You have ${userPoints}');
+alert(`You have ${userPoints} points`);
