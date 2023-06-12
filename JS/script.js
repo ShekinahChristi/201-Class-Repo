@@ -10,25 +10,31 @@ alert('Hi' + userName + 'welcome to my page!');
 // falsy
 let userPoints = 0;
 
-let answer1 = prompt('Was I born in Nashville?');
+function birthPlace(userinput){
+
+let answer1 = prompt(userinput);
+console.log('Was I born in Nashville?');
 
 if (answer1 === 'yes' || answer1 === 'y') {
-  alert('Correct, on to the next question' + ' ' + userPoints);
-
+  alert('Correct, on to the next question');
+userPoints++;
   // console.log('Correct, on to the next question');
 } else if (answer1 === 'no' || answer1 === 'n') {
   alert('Nope try again');
 } // console.log('Nope try again');
 else {
   alert('That answer is not valid');
+ 
 }
+}
+birthPlace('Was I born in Nashville?');
 
-
-let answer2 = prompt('My birthday is in June?');
+function birthdate(userinput){
+let answer2 = prompt(userinput);
 
 if (answer2 === 'yes' || answer2 === 'y') {
   // console.log('Right again, Keep going!!');
-  alert('Right again, Keep going!!' + ' ' + userPoints);
+  alert('Right again, Keep going!!' );
   userPoints++;
 } else if (answer2 === 'no' || answer2 === 'n') {
   // console.log('Only 11 other months right, who could have known');
@@ -37,12 +43,16 @@ if (answer2 === 'yes' || answer2 === 'y') {
   alert('That answer is not valid');
 
 }
+}
+birthdate('My birthday is in June?');
 
-let answer3 = prompt('I was an only child growing up?');
+
+function childhood(userinput){
+let answer3 = prompt(userinput);
 
 if (answer3 === 'yes' || answer3 === 'y') {
   // console.log('It was lonely but your right');
-  alert('It was lonely but your right' + ' ' + userPoints);
+  alert('It was lonely but your right' );
 
 } else if (answer3 === 'no' || answer3 === 'n') {
   // console.log('I wish but try again friend.');
@@ -50,24 +60,33 @@ if (answer3 === 'yes' || answer3 === 'y') {
 } else {
   alert('That answer is not valid');
 }
-let answer4 = prompt('I played football and baseball growing up?');
+}
+childhood('I was an only child growing up?');
+
+
+function sports(userinput){
+let answer4 = prompt(userinput);
 
 if (answer4 === 'yes' || answer4 === 'y') {
   // console.log('Ah yes, I loved running back and shortstop');
-  alert('Ah yes, I loved running back and shortstop' + ' ' + userPoints);
+  alert('Ah yes, I loved running back and shortstop' );
 
 } else if (answer4 === 'no' || answer4 === 'n') {
   // console.log('Man I wouldnt know what id do if you were right');
-  alert('Man I wouldnt know what id do if you were right' + ' ' + userPoints);
+  alert('Man I wouldnt know what id do if you were right');
 }else {
   alert('That answer is not valid');
-
 }
-let answer5 = prompt('Did I graduate from Tennessee State University');
+}
+sports('I played football and baseball growing up?');
+
+
+function collegeschool(userinput){
+let answer5 = prompt(userinput);
 
 if (answer5 === 'yes' || answer5 === 'y') {
   // console.log('Yes I did, graduate from The Land Of Golden Sunshine, The best HBCU in the land.');
-  alert('Yes I did, graduate from the The Land Of Golden Sunshine, The best HBCU in the land.' + ' ' + userPoints);
+  alert('Yes I did, graduate from the The Land Of Golden Sunshine, The best HBCU in the land.' );
 
 } else if (answer5 === 'no' || answer5 === 'n') {
   // console.log('And miss my chance to meet Oprah, I do not think so!');
@@ -75,6 +94,9 @@ if (answer5 === 'yes' || answer5 === 'y') {
 } else {
   alert('That answer is not valid');
 }
+}
+collegeschool('Did I graduate from Tennessee State University');
+
 let number ='';
 let i = 0;
 while (number !== '6'){
@@ -103,3 +125,5 @@ for (let i = 0; i < 4; i++){
 alert('You have gained ${userPoints}');
 
 alert('You have ${userPoints}');
+
+
