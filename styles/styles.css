@@ -6,3 +6,6 @@ p {
   font-family: 'Courier New', Courier, monospace;
   color:whitesmoke; background-color: blue;
 }
+ol{
+  list-style: lower-roman;
+}
